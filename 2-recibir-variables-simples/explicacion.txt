@@ -1,0 +1,32 @@
+Vamos a ver como recibir variables simples:
+
+Los siguiente elementos los recibimos del formulario como cadenas:
+- Input(de todo tipo),
+- Radio button,
+- Select sencillo,-> una de las acciones
+- Textarea.
+
+Los checkbox y los select multiples los vamos a recibir como arreglos.
+
+NOTA:
+En los formularios de tipo select el valor que viaja por el formulario es el value:
+
+<select id="idioma" name="idioma">
+  <option value="es">Español</option>
+  <option value="en">Ingles</option>
+  <option value="fr">Frances</option>
+</select>
+
+Para los radio button pasa igual el valor que viaja en el formulario es el value:
+
+<input type="radio" name="estado" id="soltero" value="soltero">
+<label for="soltero">Soltero</label><br>
+<input type="radio" name="estado" id="casado" value="casado">
+<label for="casado">Casado</label><br>
+<input type="radio" name="estado" id="viudo" value="viudo">
+<label for="viudo">Viudo</label><br>
+
+
+
+
+
