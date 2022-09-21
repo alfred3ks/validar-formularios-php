@@ -1,0 +1,49 @@
+Vamos a ver lo que es la comunicacion de un formulario, osea una pagina que generalmente puede ser html con php.
+
+- Al usar PHP7 mediante un servidor de paginas web, el unico medio de comunicacion 'interactiva' con los usuarios es a traves de formas HTMl.
+
+- En ellas, el usuario escribe datos que son evaluados y procesados por una rutina de PHP7 y genera resulatado.
+
+- Los metodos para enviar los datos de un formaulario a otra pagina son GET y POST.
+
+La manera tradicional es tener un formulario en .html o .php y este manda a llamar otro archivo .php que valida estos datos.
+Si son correctos los guardara en la base de datos o lom que sea el necesario.
+
+- El metodo GET envia los datos en la url del navegador, por lo cual son visibles a un posible observaor directo o a quedar almacenados en el historico del navegador. No podemos enviar datos binarios, como images.
+
+- El metodo POST envia los valores dentro de los paquetes HTTP que son los bloques (MIME), por lo cual no es visible y podemos enviar datos binarios, como las imagenes.
+
+- En ambos casos, al crearse la pagina PHP, se generar automaticamente los arreglos de ambiente, lo hace el apache:
+
+$_GET[]
+$_POST[]
+
+- Tambiense generara un arreglo $_REQUEST[] que constiene ambos metodos pero no es aconsejado.
+
+Cuando creamos un formulario los datos importantes de los items el atributo name, ojo muy importante porque ese es el nombre que usare php para agarrar la variable.
+
+
+Veamos el ejercicio con el metod GET:
+
+<form action="valida.php" method="GET">
+  <input type="text" name="nombre" id="nombre" />
+  <!-- <input type="submit" value="Enviar" id="btn" /> -->
+  <button type="submit" value="Enviar">Enviar Datos</button>
+</form>
+
+OJO con estos atributos.
+- Para los input el name.
+- Para el btn el value.
+
+http://localhost:88/1-comunicacion-de-un%20form-php/valida.php?nombre=James+Bond
+
+Al enviar por medio el metodo GET vemos como se envia los datos en la url.
+
+NOTA:
+Diferencias entre echo y print:
+Ambas funciones nos permiten mostrar un output en pantalla y ambas funciones no llevan paréntesis al momento de llamarlas. Sin embargo, existe una diferencia importante pero no muy conocida entre ambas. Mientras que con la función echo podemos imprimir directamente varias cadenas a la vez, con la función print solo podremos imprimir una cadena cada vez que sea llamada.
+NOTA:
+
+Ahora si usamos el metodo post vemos la salida que nos muestra la url:
+
+http://localhost:88/1-comunicacion-de-un%20form-php/valida.php
