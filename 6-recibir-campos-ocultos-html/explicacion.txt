@@ -1,0 +1,41 @@
+Vamos a seguir validando nuestro formulario.
+
+Vamos a ver otra funcion que tambien se suele usar para hacer validaciones.
+Los campos ocultos son de tipo input y su type sera hidden.
+Nos sirve para mandar informacion del formulario que no queremos que el usuario lo vea. Lo usaremos para validar.
+
+Recibir campos ocultos de formas HTML.
+
+- A veces es necesario incluir valores que sean asignado a una variables al mandar una forma, pero sin que el usuario se entere. Para esto se usan los campos ocultos.
+
+- Supongamos que se desea pasar los nombres de las plantillas HTML que se van a mostrar si hubo un error en el llenado de la forma, y otra cuando el llenado fue existoso.
+
+Primero queremos que cuando se envie el formulario solo se muestre la respuesta del php y se quite el formulario.
+
+Tenemos que reestructurar el codigo.
+
+Vamos a agregar un nuevo elemento al formulario.
+
+<input type="hidden" name="bandera" id="bandera" value="bandera">
+
+Ahora vamos a estructurar nuestro php, vamos a poner codigo en el body arriba del h1.
+
+Lo que hacemos con el campo oculto o la bandera es que esa bandera la primera vez no existe entonces nos muestra el formulario, cuando s envian los datos la bandera pasa a ser true y ya no se mostraria el formulario.
+
+Lo podemos ver en el archivo formulario.php
+Esto es una manera de hacer esto, esta bien, es interesante.
+
+Ahora continuamos con un nuevo archivo formularioBis.php:
+
+Ahora lo que haremos es mostrar los mensajes de error debajo del input que genera el problema no en la parte superior.
+
+Vamos a modificar el array de error ahora.
+
+Para esto tenemos que modificar el push sobre el array.
+Lo que haremos es asignar directamente a cada mensaje una posicion en el array.
+
+$error[0] = 'msj';
+
+OJO con la validacion de los errores:
+
+if (is_countable($error) && count($error) == 0 && isset($_POST["bandera"])) {

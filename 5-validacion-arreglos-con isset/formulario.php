@@ -52,7 +52,7 @@
       array_push($error, "Error: Debes seleccionar al menos un sabor de pastel.");
     }
 
-    // Iteramos el array del error:
+    // Iteramos el array del error y lo mostramos:
     if (count($error) > 0) {
       print "<ul>";
       foreach ($error as $key => $value) {
