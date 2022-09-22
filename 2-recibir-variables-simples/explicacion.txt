@@ -25,8 +25,3 @@ Para los radio button pasa igual el valor que viaja en el formulario es el value
 <label for="casado">Casado</label><br>
 <input type="radio" name="estado" id="viudo" value="viudo">
 <label for="viudo">Viudo</label><br>
-
-
-
-
-

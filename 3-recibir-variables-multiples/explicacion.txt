@@ -1,0 +1,45 @@
+Vamos ahora a recibir variables multiples, esas que podemos recibir en un array.
+
+He agregado mas items al formulario.
+
+Los siguientes elementos los recibimos del formulario como arreglos:
+- select multiple,
+- cajas de verificacion.
+
+<label>Pasatiempos:</label><br>
+<label>
+  <input type="checkbox" name="pasatiempos[]" value="leer" id="leer">Leer
+</label><br>
+<label>
+  <input type="checkbox" name="pasatiempos[]" value="dormir" id="dormir">Dormir
+</label><br>
+<label>
+  <input type="checkbox" name="pasatiempos[]" value="ajedrez" id="ajedrez">Ajedrez
+</label><br><br>
+<label for="pasteles">Sabor de pasteles preferidos:</label><br>
+<select multiple="multiple" name="pasteles[]" id="pasteles">
+  <option value="chocolate">Chocolate</option>
+  <option value="fresa">Fresa</option>
+  <option value="vainilla">Vainilla</option>
+  <option value="coco">Coco</option>
+  <option value="napolitano">Napolitano</option>
+</select><br>
+
+Vemos como el atributo name="pasatiempos[]" le asignamos un array.
+
+Aqui el detalle radica que para leer ese numero de arrays osea procesarlo dentro del archivo valida.php debemos usar la funcion count() pasandoles la variable.
+
+$pasatiempos = $_POST["pasatiempos"];
+print "<p>Numero de pasatiempos:       " . count($pasatiempos) . "</p>";
+
+Con esa funcion vemos el numero de elementos del array. Ahora si queremos ver cuales son ddebemos iterar por medio de un forEach()
+
+print "<ul>";
+foreach ($pasatiempos as $key => $value) {
+  print "<li>" . $value . "</li>";
+}
+print "</ul>";
+
+En resumen hemos visto como capturar los datos de elementos multiples y luego como mostrarlos.
+
+Lo siguiente veremos como validar que no se nos envien datos vacios.
