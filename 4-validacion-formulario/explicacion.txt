@@ -1,0 +1,29 @@
+Vamos a ver ahora como validar los datos, lo mas sencillo que veremos ahora es validar las cadenas.
+
+- El primer ejemplo compara la variable $nombre contra un string "vacio representado por comillas dobles.
+- El segundo unsa una funcion integrada que obtiene la longitud de un string (strlen) y lo compara contra el numero cero (0).
+- En ambos casos si llega a ser true se ejecutara el codigo para manejar el error.
+
+Haremos una primer validacion usando if y else if.
+
+Para este ejemplo vemos que como estamos validando con if/else if solo mostrara el primer mensaje que encuentre que no se cumple la condicion.
+La validacion la podemos hacer usando else if y ir evaluando cada uno de los items ha recibir.
+
+Para el caso de los elementos que capturamos del arrays no tiene sentido validarlo con una cadena vacia, lo vemos mas adelante.
+
+Para mostrar todos los errores que no cumple el usuario al enviar el formulario:
+
+$error = array();
+
+Ya no nos sirve validar con la opcion else if() lo tenemos que hacer con if solo.
+
+
+// Asi mostramos los error:
+if (count($error) > 0) {
+  print "<ul>";
+  foreach ($error as $key => $value) {
+    print "<li>" . $value . "</li>";
+  }
+  "</ul>";
+
+Esto es una validacion minima que podemos hacer con el formulario.
