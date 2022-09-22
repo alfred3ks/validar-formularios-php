@@ -1,0 +1,45 @@
+Ahora vamos a ver como podemos validar esos input del formulario que nos envian varios datos, esos los recibimos en un array.
+
+Para eso tenemos la funcion isset().
+
+- Para las variables de tipo arrays, que se manejan en los combos de lista y los cuadros checado, lo primero a validar es si existe el arreglo, ya que si el usuario no selecciona ninguna opcion, no se genera un arreglo vacio, sino que la variable ni siquiera existe.
+- En el caso de existir, es bueno saber cuantos elementos tiene la variable.
+-Con la funcion isset() nos regres un valor verdadero si la varaibles esta definida, ose que existe, y un valor falso si esta varaible NO esta definida.
+
+OJO tambien podriamos usar esta validacion para campos simples.
+
+Para este ejercicio vamos a hacer la validacion en el mismo archivo, quitaremos desde el formulario el reenvio a valida.php y lo haremos en la cabecera de nuestro propio formulario.
+
+Lo pondremos en la etiqueta head. OJO con eso PHP puede ir en cualquier parte del codigo HTML.
+
+Cuando lo hacemos asi vemos como al inicio nos muestra un error de las variables, esto esta bien porque nuestra actual validacion nos chechea que las variables no sean vacias. Ver imagen img/error.png y la primera vez que se carga la apgina esas variables no existen.
+
+Lo vamos a solucionar usando un condicional if() con la funcion isset():
+Lo que dice la documentacion de PHP:
+
+https://www.php.net/manual/es/function.isset.php
+
+isset() — Determina si una variable está definida y no es null
+
+isset(mixed $var, mixed $... = ?): bool
+
+Para este caso si la variable esta definida entrara en el bucle, de lo contrario es true y no entra y asi evitamos los errores.
+
+Vale otra cosa que debes saber que de esta forma la respuesta del formulario la hara en la cabecera del formulario.
+Ya veremos mas adelante como mostrar solo la informacion y que no se muestre el formulario.
+
+Ahora vamos a validar los arreglos.
+Pasatiempos y pasteles.
+
+OJO siempre es importante validar los arreglos por medio de la funcion isset().
+
+if (isset($pasatiempos)) {
+  if (count($pasatiempos) == 0) {
+    array_push($error, "Error: Debes seleccionar al menos un pasatiempo.");
+  }
+} else {
+      array_push($error, "Error: Debes seleccionar al menos un pasatiempo.");
+    }
+
+Haremos lo mismo con los pasteles.
+
