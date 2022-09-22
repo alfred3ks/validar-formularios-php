@@ -1,0 +1,19 @@
+Vamos a ver este tema que tambien esta relacionado con los formularios.
+
+Podemos utilizar plantillas en formularios.
+
+- Por medio de pasar un solo parámetro podemos utilizar una plantilla para reducir el numero de archivos necesarios.
+- Tambien podemos pasar un parametro en un hipervínculo.
+
+En el ejemplo anterior usamos el comando Header para pasar la redireccion a una pagina, para eso esta bien pero imagina si tenemos una tienda y necesitamos pasar 100 paginas, no es rentable.
+
+No debemos tener tantos archivos fisicos.
+
+Lo normal es tener una plantilla y le pasamos un parametro y de alguna manera armamos la informacion. Vamos a la BD leemos la informacion y la mostramos.
+
+Solo tenemos un archivo que es una plantilla. Asi lo hace WordPress OJO.
+
+Veremos como hacerlo por medio de un hipervinculo.
+
+Como vemos estamos usando una plantilla para mostrar 4 animales.
+
