@@ -1,0 +1,13 @@
+Vamos a ver otro comando de utilidad llamado header.
+
+Con este vamos a poder redirecionar a otras paginas desde el formulario.
+
+Header no forma parte de los formularios pero lo vamos a ver.
+
+- Por medio del comando HEADER podemos desviar el flujo de la pagina a otra, pero no debe hacer ninguna salida a la pantalla, ya sea de PHP o HTML.
+
+OJO con esto anterior.
+
+Partimos de un archivo en blanco, un nuevo formulario.
+
+Para este ejemplo usaremos el metodo GET.
